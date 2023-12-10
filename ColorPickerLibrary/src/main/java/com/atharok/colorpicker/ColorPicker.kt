@@ -54,13 +54,15 @@ class ColorPicker: FrameLayout {
         updateColor()
     }
 
-    override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
-        super.onLayout(changed, left, top, right, bottom)
-        updateThumbDrawable(redSeekBar, redThumb)
-        updateThumbDrawable(greenSeekBar, greenThumb)
-        updateThumbDrawable(blueSeekBar, blueThumb)
-        updateThumbDrawable(alphaSeekBar, alphaThumb)
-        updateGradientDrawables()
+    override fun onWindowFocusChanged(hasWindowFocus: Boolean) {
+        super.onWindowFocusChanged(hasWindowFocus)
+        if (hasWindowFocus) {
+            updateThumbDrawable(redSeekBar, redThumb)
+            updateThumbDrawable(greenSeekBar, greenThumb)
+            updateThumbDrawable(blueSeekBar, blueThumb)
+            updateThumbDrawable(alphaSeekBar, alphaThumb)
+            updateGradientDrawables()
+        }
     }
 
     private fun updateThumbDrawable(seekBar: SeekBar, thumbDrawable: GradientDrawable) {
