@@ -1,0 +1,4 @@
+<resources>
+    <string name="color_preview">Color preview</string>
+    <string name="hexadecimal_color_hint">Hexadecimal color</string>
+</resources>

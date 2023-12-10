@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/color_picker_space_large">
+
+    <com.atharok.colorpicker.ColorPicker
+        android:id="@+id/color_picker_dialog_layout_color_picker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/color_picker_space_standard"
+        android:paddingEnd="0dp"
+        app:layout_constraintStart_toEndOf="@id/color_picker_dialog_layout_preview_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/color_picker_dialog_layout_preview_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/color_picker_space_standard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/color_picker_dialog_layout_color_picker"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/color_picker_dialog_layout_color_picker"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_default="spread">
+
+        <ImageView
+            android:id="@+id/color_picker_dialog_layout_color_preview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="@dimen/color_picker_space_standard"
+            android:contentDescription="@string/color_preview"
+            android:src="@drawable/color_preview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/color_picker_dialog_layout_text_input_layout"
+            app:layout_constraintHeight_default="spread" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/color_picker_dialog_layout_text_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/color_picker_space_standard"
+            app:hintEnabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/color_picker_dialog_layout_color_preview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_default="spread">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/color_picker_dialog_layout_text_input_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hexadecimal_color_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textFilter|textNoSuggestions"
+                android:maxLength="9"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
