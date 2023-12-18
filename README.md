@@ -74,7 +74,7 @@ val colorPickerDialog = builder.apply {
 }.show()
 ```
 
-# License
+## License
 
 ```txt
 Copyright 2023 Atharok
