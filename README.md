@@ -28,7 +28,7 @@ dependencies {
 ## Usage
 
 An example of use is available here:
-[/app/src/main/java/com/atharok/colorpickerapp/MainActivity.kt](https://github.com/Atharok/ColorPicker/blob/main/app/src/main/java/com/atharok/colorpickerapp/MainActivity.kt)
+[/app/src/main/java/com/atharok/colorpickerapp/MainActivity.kt](https://github.com/Atharok/ColorPicker/blob/main/app/src/main/java/com/atharok/colorpickerapp/MainActivity.kt)<br/>
 [/app/src/main/res/layout/activity_main.xml](https://github.com/Atharok/ColorPicker/blob/main/app/src/main/res/layout/activity_main.xml)
 
 ### Sample
